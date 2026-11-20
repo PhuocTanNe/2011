@@ -42,12 +42,12 @@ window.LOI_CHUC = {
 
   // Thư tay từng chú — thêm/bớt thoải mái, mỗi chú 1 cặp { ten, loiChuc }.
   cacChu: [
-    { ten: "Chú Minh", loiChuc: "Chúc cô luôn tươi tắn như những bông hoa trong lớp, để sáng nào các bé đến trường cũng được thấy cô cười." },
-    { ten: "Chú Hùng", loiChuc: "Ngoài thao trường các chú tập nghiêm, trong lớp cô dạy các bé ngoan. Mỗi người một mặt trận — chúc cô luôn vững vàng!" },
-    { ten: "Chú Tuấn", loiChuc: "Cảm ơn cô đã kiên nhẫn với những bạn nhỏ khóc nhè, ăn chậm, ngủ trễ. Chúc cô 20/11 thật nhiều niềm vui." },
-    { ten: "Chú Nam", loiChuc: "Chúc cô giáo mầm non sức khỏe dồi dào, giọng hát luôn trong và trái tim luôn ấm áp." },
-    { ten: "Chú Dũng", loiChuc: "Các chú gác súng nơi biên cương, cô giữ ấm những giấc ngủ trưa. Chúc cô một ngày Nhà giáo thật hạnh phúc!" },
-    { ten: "Chú Phong", loiChuc: "Gửi cô một cái chào thật nghiêm trang và một lời chúc thật dịu dàng: 20/11 vui vẻ, cô nhé!" }
+    { ten: "Chú Tân", loiChuc: "Chúc cô luôn tươi tắn như những bông hoa trong lớp, để sáng nào các bé đến trường cũng được thấy cô cười." },
+    { ten: "Chú Ngọc", loiChuc: "Ngoài thao trường các chú tập nghiêm, trong lớp cô dạy các bé ngoan. Mỗi người một mặt trận — chúc cô luôn vững vàng!" },
+    { ten: "Chú Lộc", loiChuc: "Cảm ơn cô đã kiên nhẫn với những bạn nhỏ khóc nhè, ăn chậm, ngủ trễ. Chúc cô 20/11 thật nhiều niềm vui." },
+    { ten: "Chú Thân", loiChuc: "Chúc cô giáo mầm non sức khỏe dồi dào, giọng hát luôn trong và trái tim luôn ấm áp." },
+    { ten: "Chú Đạt", loiChuc: "Các chú gác súng nơi biên cương, cô giữ ấm những giấc ngủ trưa. Chúc cô một ngày Nhà giáo thật hạnh phúc!" },
+    { ten: "Chú Ninh", loiChuc: "Gửi cô một cái chào thật nghiêm trang và một lời chúc thật dịu dàng: 20/11 vui vẻ, cô nhé!" }
   ],
 
   // Hộp quà bí mật — trang bốc ngẫu nhiên 3 món mỗi lần xem.
