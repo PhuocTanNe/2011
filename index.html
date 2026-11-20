@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Các chú bộ đội chúc mừng 20/11</title>
+  <meta name="description" content="Lời chúc mừng Ngày Nhà giáo Việt Nam 20/11 từ các chú bộ đội gửi các cô giáo mầm non.">
+  <meta name="theme-color" content="#3E5E26">
+  <!-- Thẻ xem trước khi dán link vào Zalo / Messenger / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Có một lá thư từ các chú bộ đội gửi cô 💌">
+  <meta property="og:description" content="Mừng Ngày Nhà giáo Việt Nam 20/11 — mở thư để nhận lời chúc, quà và pháo hoa từ các chú nhé!">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23D7261E'/%3E%3Cpath d='M16 5l3.2 7.2 7.8.6-6 5.1 1.9 7.6L16 21.4l-6.9 4.1 1.9-7.6-6-5.1 7.8-.6z' fill='%23F2B705'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Dancing+Script:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Gắn class "js" thật sớm để CSS ẩn sẵn các khối chờ hiện dần; nếu JS lỗi thì nội dung vẫn hiện bình thường. -->
+  <script>document.documentElement.classList.add('js');</script>
+  <noscript><style>.intro{display:none!important}</style></noscript>
+</head>
+<body class="is-locked">
+  <canvas id="fx-petals" class="fx-layer" aria-hidden="true"></canvas>
+
+  <!-- ===== Màn mở thư ===== -->
+  <div id="intro" class="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    <div class="intro__glow" aria-hidden="true"></div>
+    <div class="envelope" id="envelope" aria-hidden="true">
+      <div class="envelope__back"></div>
+      <div class="envelope__letter"><span class="envelope__date">20/11</span><span class="envelope__note">Gửi cô thân mến</span></div>
+      <div class="envelope__front"></div>
+      <div class="envelope__flap"></div>
+      <div class="envelope__seal" data-art="seal"></div>
+    </div>
+    <p class="intro__kicker">Có một lá thư từ các chú bộ đội</p>
+    <h2 id="intro-title" class="intro__title">Gửi <span data-recipient>các cô giáo mầm non</span></h2>
+    <button id="btn-open" class="btn btn--gold btn--lg btn--pulse" type="button">Mở thư</button>
+    <p class="intro__hint">Bật âm thanh điện thoại để nghe nhạc nhé</p>
+  </div>
+
+  <main id="main" class="page" inert>
+    <!-- ===== 1. Trang đầu ===== -->
+    <section class="hero" id="trang-dau">
+      <div class="hero__rays" aria-hidden="true"></div>
+      <div class="hero__bunting" data-art="bunting" aria-hidden="true"></div>
+      <p class="hero__kicker">Ngày Nhà giáo Việt Nam · 20/11/<span data-year>2026</span></p>
+      <h1 class="hero__title" id="hero-title" tabindex="-1">Kính chúc<br><span class="script" data-recipient-short>các cô</span><br>20/11 hạnh phúc!</h1>
+      <div class="hero__stage">
+        <div class="soldier-wrap">
+          <p class="bubble" aria-live="polite"></p>
+          <button class="soldier-btn" type="button" data-skin="#EDB98A" aria-label="Chạm để chú bộ đội chào cô"></button>
+        </div>
+        <div class="soldier-wrap">
+          <p class="bubble" aria-live="polite"></p>
+          <button class="soldier-btn" type="button" data-skin="#F5CBA7" data-bouquet="1" aria-label="Chạm để chú bộ đội tặng hoa cho cô"></button>
+        </div>
+        <div class="hero__ground" aria-hidden="true"></div>
+      </div>
+      <p class="hero__hint">Chạm vào các chú để được chào nhé!</p>
+      <a href="#la-thu" class="scroll-cue">
+        Kéo xuống xem tiếp
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== 2. Lá thư ===== -->
+    <section class="section" id="la-thu">
+      <p class="section__eyebrow reveal">Thư từ thao trường</p>
+      <h2 class="section__title reveal">Lá thư gửi cô</h2>
+      <article class="letter reveal">
+        <div class="letter__stamp" data-art="stamp" aria-hidden="true"></div>
+        <p class="letter__greeting">Kính gửi <span data-recipient>các cô giáo mầm non</span>,</p>
+        <div class="sr-only" id="letter-full"></div>
+        <div class="letter__body" id="letter-body" aria-hidden="true"></div>
+        <p class="letter__sign" id="letter-sign"></p>
+        <button class="letter__skip" id="letter-skip" type="button">Hiện cả lá thư</button>
+      </article>
+    </section>
+
+    <!-- ===== 3. Thước phim ===== -->
+    <section class="section" id="thuoc-phim">
+      <p class="section__eyebrow reveal">Thước phim nhỏ</p>
+      <h2 class="section__title reveal">Chuyện của các chú và cô</h2>
+      <p class="section__lead reveal">Chạm bên phải để xem cảnh tiếp, bên trái để xem lại.</p>
+      <div class="story reveal" id="story">
+        <div class="story__bars" aria-hidden="true"></div>
+        <div class="story__stage" aria-hidden="true"></div>
+        <p class="story__caption" aria-live="polite"></p>
+        <button class="story__nav story__nav--prev" type="button" aria-label="Cảnh trước"></button>
+        <button class="story__nav story__nav--next" type="button" aria-label="Cảnh tiếp theo"></button>
+        <button class="story__toggle" type="button" aria-label="Tạm dừng phim"></button>
+      </div>
+
+      <div class="videos" id="videos">
+        <h3 class="videos__title reveal">Video lời chúc từ đơn vị</h3>
+        <div class="videos__list" id="video-list"></div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Thư tay từng chú ===== -->
+    <section class="section" id="thu-tay">
+      <p class="section__eyebrow reveal">Thư tay</p>
+      <h2 class="section__title reveal">Mỗi chú một lời chúc</h2>
+      <p class="section__lead reveal">Chạm vào từng tấm thẻ để lật xem các chú viết gì cho cô.</p>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <!-- ===== 5. Vườn hoa ===== -->
+    <section class="section" id="vuon-hoa">
+      <p class="section__eyebrow reveal">Vườn hoa tri ân</p>
+      <h2 class="section__title reveal">Trồng hoa tặng cô</h2>
+      <p class="section__lead reveal">Chạm vào khu vườn, mỗi lần chạm là một bông hoa nở.</p>
+      <!-- Vùng chạm chỉ dành cho ngón tay; người dùng bàn phím/trình đọc màn hình dùng nút "Trồng thêm 1 bông" bên dưới. -->
+      <div class="garden reveal" id="garden" aria-hidden="true">
+        <p class="garden__hint" id="garden-hint">Chạm vào đây nhé!</p>
+        <div class="garden__ground" aria-hidden="true"></div>
+      </div>
+      <div class="garden__bar reveal">
+        <p class="garden__count" aria-live="polite">Đã trồng <b id="flower-count">0</b> bông hoa tặng cô</p>
+        <button class="btn btn--ghost btn--sm" id="btn-plant" type="button">Trồng thêm 1 bông</button>
+      </div>
+    </section>
+
+    <!-- ===== 6. Hộp quà ===== -->
+    <section class="section" id="hop-qua">
+      <p class="section__eyebrow reveal">Quà bí mật</p>
+      <h2 class="section__title reveal">Các chú gửi cô 3 hộp quà</h2>
+      <p class="section__lead reveal">Mỗi hộp là một bất ngờ. Cô mở hết nhé!</p>
+      <div class="gifts" id="gifts"></div>
+    </section>
+
+    <!-- ===== 7. Lời đáp ===== -->
+    <section class="section" id="loi-dap">
+      <p class="section__eyebrow reveal">Hồi âm</p>
+      <h2 class="section__title reveal">Cô nhắn lại các chú nhé</h2>
+      <div class="reply reveal">
+        <label for="reply-text" class="reply__label">Cô muốn nhắn gì tới các chú?</label>
+        <div class="chips" id="chips">
+          <button type="button" class="chip">Cảm ơn các chú nhiều lắm!</button>
+          <button type="button" class="chip">Các chú giữ gìn sức khỏe nhé!</button>
+          <button type="button" class="chip">Chúc các chú công tác tốt!</button>
+        </div>
+        <textarea id="reply-text" rows="4" maxlength="600" aria-describedby="reply-help reply-error" placeholder="Viết vài dòng thật lòng…"></textarea>
+        <p class="reply__help" id="reply-help">Bấm gửi để chia sẻ qua Zalo, Messenger hoặc chép lại để dán.</p>
+        <p class="reply__error" id="reply-error" role="alert"></p>
+        <button class="btn btn--primary btn--block" id="btn-send" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          Gửi lời nhắn
+        </button>
+      </div>
+      <div class="love reveal">
+        <button class="love__btn" id="btn-heart" type="button" aria-describedby="heart-count">
+          <span data-icon="heart"></span>
+          <span class="sr-only">Thả tim cho các chú</span>
+        </button>
+        <p class="love__count" id="heart-count" aria-live="polite">Chạm để thả tim cho các chú</p>
+      </div>
+    </section>
+
+    <!-- ===== 8. Kết ===== -->
+    <section class="finale" id="phao-hoa">
+      <div class="finale__soldiers" id="finale-soldiers" aria-hidden="true"></div>
+      <h2 class="finale__title reveal">Tri ân <span class="script">cô giáo</span> mầm non</h2>
+      <p class="finale__text reveal">Cảm ơn cô đã ươm những mầm non cho đất nước.<br>Các chú kính chúc cô 20/11 thật nhiều niềm vui!</p>
+      <button class="btn btn--gold btn--lg reveal" id="btn-fireworks" type="button">
+        <span data-icon="sparkles"></span>
+        Bắn pháo hoa mừng 20/11
+      </button>
+      <footer class="footer">
+        <details class="maker">
+          <summary>Dành cho người gửi: tạo link riêng cho từng cô</summary>
+          <div class="maker__body">
+            <label for="maker-name">Tên cô (vd: Lan, Hoa…)</label>
+            <div class="maker__row">
+              <input id="maker-name" type="text" maxlength="40" autocomplete="off" placeholder="Nhập tên">
+              <button class="btn btn--gold btn--sm" id="maker-copy" type="button">Chép link</button>
+            </div>
+            <p class="maker__out" id="maker-out"></p>
+          </div>
+        </details>
+        <p class="footer__credit">Làm với tất cả lòng quý mến · <span data-sign></span></p>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Nút nổi: luôn trong tầm ngón cái ở góc dưới phải khi đang cuộn trên điện thoại -->
+  <div class="dock" id="dock">
+    <button class="dock__btn" id="btn-music" type="button" aria-label="Bật nhạc" aria-pressed="false"></button>
+    <button class="dock__btn dock__btn--rose" id="btn-dock-fw" type="button" aria-label="Bắn pháo hoa"></button>
+  </div>
+
+  <dialog class="dialog" id="gift-dialog" aria-labelledby="gift-title">
+    <div class="dialog__art" id="gift-art" aria-hidden="true"></div>
+    <div class="dialog__body">
+      <p class="dialog__kicker">Các chú tặng cô</p>
+      <h3 class="dialog__title" id="gift-title"></h3>
+      <p class="dialog__text" id="gift-text"></p>
+      <button class="btn btn--primary btn--block" id="gift-close" type="button">Cảm ơn các chú!</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <canvas id="fx-top" class="fx-layer fx-layer--top" aria-hidden="true"></canvas>
+
+  <!-- Script thường (không phải type=module) để mở thẳng file index.html bằng trình duyệt vẫn chạy:
+       module bị chặn khi mở qua file://, chỉ chạy được khi đã đưa lên GitHub Pages. -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/art.js"></script>
+  <script src="assets/js/effects.js"></script>
+  <script src="assets/js/music.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
